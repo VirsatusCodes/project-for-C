@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yaaaaaay</title>
+    <script src="java.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="explanation">
+            <p>To figure out how many hours you worked put in the starting time you worked and the ending time you worked in the two boxes
+                below , start on the left and end on the right, then click the total button on the side and you have current hours worked in the display to the right of the 
+                button. just keep putting in hours and keep pressing the total button and it will keep updating total hours of hours worked, when you are done adding
+                days and times take the value from the box and you have however many hours you have worked! below those are ways to calculate what you should
+                be paid and also how tips should be split. If you refresh the page all the data you entered will be reset!!
+            </p>
+        </div>
+        <form>           
+            <div class="first-layer">
+                <label for="start-time">start of workday(in 24 hour format):</label>
+                <input type="number" id="start-time" placeholder="ex 1245 NOT 12:45">
+                
+                <label for="end-time">end of workday(in 24 hour format):</label>
+                <input type="number" id="end-time">
+            </div>           
+            <div class="second-layer">
+                <input type="button" id="button" value="calculate">
+                
+                <label for="current-hours">Current total hours worked:</label>
+                <p id="current-hours"> </p>
+            </div>
+            <div class="third-layer">
+                <label for="hours-worked">to calculate wages put hours worked here(must be 4 digits if a value isnt needed use 0's aka if you worked only 1 hour do 0100 if you worked 30 minutes do 0030):</label>
+                <input type="number"  id="hours-worked" placeholder="3450 as in 34 hours 50 min">
+
+                <label for="hourly-wage">and your $ per hour here:</label>
+                <input type="number"  id="hourly-wage" placeholder="ex 10.50">
+                
+                <label for="total-pay">pay before taxes:</label>
+                <p id="total-pay"> </p>
+            </div>
+            <div class="fourth-layer">
+                <label for="total-tips">put how many tips there were there:</label>
+                <input type="number" id="total-tips" placeholder="ex 14.25">
+
+                <label for="people-amount">how many people?:</label>
+                <input type="number"  id="people-amount">
+                
+                <label for="tips-for-you">you will get:</label>
+                <p id="tips-for-you"> </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
