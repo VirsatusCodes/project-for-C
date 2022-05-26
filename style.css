@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+   justify-content: space-between;
+}
+
+.form{
+    flex-flow: column;
+}
+
+.explanation, .first-layer, .second-layer, .third-layer, .fourth-layer{
+    padding: 30px;
+}
+p{
+    border: solid black;
+}
