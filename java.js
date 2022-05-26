@@ -32,11 +32,15 @@ function timeWorkedConverter (totalValue) {
 }
 
 firstButton.addEventListener('click', () =>{    
+    
+    if (startTime.value > 2400 || endTime.value > 2400) return;
+    else {
     timeConverter(startTime.value, endTime.value);
     timeWorkedConverter (totalValue);
     hoursWorked.textContent = `you have worked ${convertedHours} hours and ${minutes} minutes.`;
     startTime.value = '';
     endTime.value = ''; 
+    }
 });
 
 
