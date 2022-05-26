@@ -8,7 +8,7 @@ const currentHours = document.querySelector('#current-hours');
 
 totalValue = 0;
 
-regEx = /[0-9]?[0-9]\./g
+regEx = /[0-9]?[0-9]\./g;
 
 function timeConverter(a, b) {
     firstNumber = Number((a[0] + a[1]));
@@ -29,7 +29,7 @@ function timeWorkedConverter (totalValue) {
     convertedHours = Number(hours.toString().match(regEx));
     minutes =totalValue % 60;
     if (convertedHours === 0 ) convertedHours = hours;
-}
+};
 
 firstButton.addEventListener('click', () =>{    
     
@@ -40,18 +40,18 @@ firstButton.addEventListener('click', () =>{
     currentHours.textContent = `you have worked ${convertedHours} hours and ${minutes} minutes.`;
     startTime.value = '';
     endTime.value = ''; 
-    }
+    };
 });
 
 /* First layer is complete!!! */
 
-const hoursWorked = document.querySelector('#hours-worked')
+const hoursWorked = document.querySelector('#hours-worked');
 
-const hourlyWage = document.querySelector('#hourly-wage')
+const hourlyWage = document.querySelector('#hourly-wage');
 
 const secondButton = document.querySelector('#second-button');
 
-const totalPay = document.querySelector('#total-pay')
+const totalPay = document.querySelector('#total-pay');
 
 function wagesCalculator(a, b) {
     otherFirstNumber = Number((a[0] + a[1]));
@@ -59,13 +59,27 @@ function wagesCalculator(a, b) {
 
     totalNumber = otherFirstNumber + (otherSecondNumber / 60);
 
-   pay = totalNumber * b
+   pay = totalNumber * b;
    
-}
+};
 
 secondButton.addEventListener('click', () => {
     wagesCalculator(hoursWorked.value, hourlyWage.value);
-    totalPay.textContent = `you have earned $ ${pay}`
+    totalPay.textContent = `you have earned $${pay}`;
 });
 
 /* Second layer is complete! */
+
+const totalTips = document.querySelector('#total-tips');
+
+const peopleAmount = document.querySelector('#people-amount');
+
+const thirdButton = document.querySelector('#third-button');
+
+const tipsForYou = document.querySelector('#tips-for-you');
+
+thirdButton.addEventListener('click', () => {
+    tipsForYou.textContent = `$ ${totalTips.value / peopleAmount.value}`;
+});
+
+/* completed yay */
