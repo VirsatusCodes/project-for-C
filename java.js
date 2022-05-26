@@ -4,7 +4,7 @@ const endTime = document.querySelector('#end-time');
 
 const firstButton = document.querySelector('#first-button');
 
-const hoursWorked = document.querySelector('#current-hours');
+const currentHours = document.querySelector('#current-hours');
 
 totalValue = 0;
 
@@ -37,10 +37,35 @@ firstButton.addEventListener('click', () =>{
     else {
     timeConverter(startTime.value, endTime.value);
     timeWorkedConverter (totalValue);
-    hoursWorked.textContent = `you have worked ${convertedHours} hours and ${minutes} minutes.`;
+    currentHours.textContent = `you have worked ${convertedHours} hours and ${minutes} minutes.`;
     startTime.value = '';
     endTime.value = ''; 
     }
 });
 
+/* First layer is complete!!! */
 
+const hoursWorked = document.querySelector('#hours-worked')
+
+const hourlyWage = document.querySelector('#hourly-wage')
+
+const secondButton = document.querySelector('#second-button');
+
+const totalPay = document.querySelector('#total-pay')
+
+function wagesCalculator(a, b) {
+    otherFirstNumber = Number((a[0] + a[1]));
+    otherSecondNumber = Number((a[2] + a[3]));
+
+    totalNumber = otherFirstNumber + (otherSecondNumber / 60);
+
+   pay = totalNumber * b
+   
+}
+
+secondButton.addEventListener('click', () => {
+    wagesCalculator(hoursWorked.value, hourlyWage.value);
+    totalPay.textContent = `you have earned $ ${pay}`
+});
+
+/* Second layer is complete! */
