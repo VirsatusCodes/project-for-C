@@ -72,14 +72,20 @@ secondButton.addEventListener('click', () => {
 
 const totalTips = document.querySelector('#total-tips');
 
-const peopleAmount = document.querySelector('#people-amount');
+const serviceValue = document.querySelector('#service-value');
+
+const serviceTotal = document.querySelector('#total-service-value')
 
 const thirdButton = document.querySelector('#third-button');
 
 const tipsForYou = document.querySelector('#tips-for-you');
 
+const toGetYourPercentageOfValue = 100;
+
+
+
 thirdButton.addEventListener('click', () => {
-    tipsForYou.textContent = `$ ${totalTips.value / peopleAmount.value}`;
+    tipsForYou.textContent = `$ ${toGetYourPercentageOfValue / serviceTotal.value * serviceValue.value / toGetYourPercentageOfValue * totalTips.value}`;
 });
 
 /* completed yay */
